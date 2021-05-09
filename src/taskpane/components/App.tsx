@@ -1,17 +1,17 @@
 import { PrimaryButton, Worker, Viewer } from '@react-pdf-viewer/core';
 import * as React from 'react';
-// import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 
 // Import styles
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
 
 const files = [
-  // Add your files here.
+// Your files here...  
 ]
 
 const App = () => {
-  // const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const [index, setIndex] = React.useState(0);
 
   return (
@@ -40,9 +40,9 @@ const App = () => {
           >
               <Viewer
                   fileUrl={files[index]}
-                  // plugins={[
-                  //     defaultLayoutPluginInstance,
-                  // ]}
+                  plugins={[
+                      defaultLayoutPluginInstance,
+                  ]}
               />
           </div>
       </Worker>
